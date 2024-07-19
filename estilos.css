@@ -7,6 +7,19 @@
     box-sizing: border-box;
 }
 
+:root{
+  --box-shadow:rgb(0, 0, 0);
+  --background:linear-gradient(to top , #fa709a 0%, #fee140 100%);
+  --filter:drop-shadow(0px 0px 6px blue);
+  --color-titulos:#4A4A4A;
+  --color-texto:#000;
+  --color-textoboton:#000;
+  --color-fondoboton:linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+  --fuente-title:"Cinzel", serif;
+  --fuente-texto:"Open Sans", sans-serif;
+  --fuente-boton:"Poppins", sans-serif;
+}
+
 body{
     background-image: url(img/FONDO_PAGINA.jpg);
     background-size: cover;
@@ -14,14 +27,13 @@ body{
 }
 
 .card{
-    background: #fff;
     width: 300px;
     margin: 20px;
     display: block;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px var(--box-shadow);
     border-radius: 15px;
     padding: 20px;
-    background-image: linear-gradient(to top , #fa709a 0%, #fee140 100%);
+    background-image: var(--background);
     display: inline-block;
 }
 
@@ -33,7 +45,7 @@ body{
     padding: 0 0 75px;
     margin-top: 30px;
     max-height: 350px;
-    filter: drop-shadow(0px 0px 6px blue);
+    filter: var(--filter);
 }
 
 .contenedor{
@@ -45,27 +57,27 @@ body{
 .title{
     font-size: 25px;
     text-align: center;
-    color:  #4A4A4A;
-    font-family: "Cinzel", serif; 
+    color: var(--color-titulos) ;
+    font-family: var(--fuente-title); 
 }
 
 .texto{
     font-size: 15px;
     margin: 15px;
     padding: 0 15px 15px ;
-    color: #000;
-    font-family: "Open Sans", sans-serif;
+    color: var(--color-texto);
+    font-family: var(--fuente-texto);
     text-align: center;
 }
 
 .boton{
     width: 100px;
     display: block;
-    color: #000;
+    color: var(--color-textoboton);
     text-decoration: none;
     text-align: center;
     margin: 0 auto;
-    background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
-    font-family: "Poppins", sans-serif;
-    border-radius: 5px;    
+    background-image: var(--color-fondoboton);
+    font-family: var();
+    border-radius: 5px;
 }
